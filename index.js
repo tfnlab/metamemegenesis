@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 app.get('/api/token/:token_id', function(req, res) {
   const tokenId = parseInt(req.params.token_id).toString()
   const tokenIdInt = parseInt(tokenId)
-  const person = db["0"]
+  const person = db[tokenIdInt]
   const data = {
     'name': tokenId,
     'animation_url': `${person.glburl}`,
